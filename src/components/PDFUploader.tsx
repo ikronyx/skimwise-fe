@@ -13,7 +13,7 @@ const PDFUploader = () => {
     formData.append('file', file);
     formData.append('summary_type', 'quick');
 
-    const response = await axios.post('http://localhost:8000/summarize-pdf/', formData);
+    const response = await axios.post('https://skimwise-be-production.up.railway.app/summarize-pdf/', formData);
     setSummary(response.data.summary);
   };
 
